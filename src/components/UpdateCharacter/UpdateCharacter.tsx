@@ -24,7 +24,7 @@ export const UpdateCharacter = () => {
     }
     return (
         <Container>
-            <h1>Update Your Character</h1>
+            <h1 id="update">Update Your Character</h1>
             <form onSubmit={handleSubmit(onSubmit)}>
             <input type="text" name="current_alias" id="current_alias" placeholder="Add Current Alias" ref={ register }/>
 
@@ -38,7 +38,9 @@ export const UpdateCharacter = () => {
 
             <input type="text" name="comics_appeared_in" id="comics_appeared_in" placeholder="Add Number of Comics Appeared In" ref={ register }/>
 
-            <button type="submit" className="button-styles" id="update-character">Update Character</button>
+            <div id="update-char-div">
+                <button type="submit" className="button-styles" id="update-character">Update Character</button>
+            </div>
             </form>
         </Container>
     )

@@ -22,7 +22,7 @@ export const Login = () => {
                         Sign In With Google
                     </Button>
                 }>
-                    <Button onClick={sign_out}>Sign Out</Button>
+                    <Button onClick={sign_out} id="sign-out-button">Sign Out</Button>
                 </AuthCheck>
     )
 

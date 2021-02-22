@@ -38,7 +38,9 @@ const onSubmit = (data:any) => {
                 
                 <input type="text" name="comics_appeared_in" id="comics_appeared_in" placeholder="Add Number of Comics Appeared In" ref={ register }/>
 
-                <button type="submit" className="button-styles" id="submit-character">Submit Character</button>
+                <div id="submit-char-div">
+                    <button type="submit" className="button-styles" id="submit-character">Submit Character</button>
+                </div>
             </form>
         </Container>
     )

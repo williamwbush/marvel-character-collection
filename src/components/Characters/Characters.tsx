@@ -31,7 +31,6 @@ export const Characters = () => {
             <Row>
                 <Col>
                         <h1>Your Marvel Character Collection</h1>
-                        <h4>Here is your current collection of characters!</h4>
                         <div id="here">
                             <Button onClick = { () => routeChange('','create')} id="create-character">Create New Character</Button>
                         </div>
