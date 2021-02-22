@@ -72,8 +72,16 @@ h1 {
     color: white;
 }
 
+#here {
+    width: fit-content !important;
+    margin: auto !important;
+    text-align: center;
+    align-content: center;
+}
+
 h4 {
     text-align: center;
+    margin: auto !important;
     margin-top: 5vh !important;
     padding: 2vw;
     width: 70%;
@@ -96,7 +104,6 @@ h4 {
 #create-character {
     background-color: #F0131E;
     border: none;
-    margin-left: 26vw;
 
     margin-bottom: 3vh;
 }
