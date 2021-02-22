@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import { Home, CreateCharacter, Characters, UpdateCharacter, Login, InputKey} from './components';
+import { Home, CreateCharacter, Characters, UpdateCharacter, Login} from './components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Navbar, Nav} from 'react-bootstrap';
 import logo from './assets/img/marvel_banner.png';
@@ -75,7 +75,6 @@ render(
           <CreateCharacter />
         </Route>
         <Route path="/characters">
-          <InputKey />
           <Characters />
         </Route>
         <Route path="/update">
