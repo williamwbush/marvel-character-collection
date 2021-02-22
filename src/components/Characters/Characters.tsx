@@ -49,19 +49,19 @@ export const Characters = () => {
                                             { item.current_alias }
                                         </Card.Title>
                                         <Card.Text>
-                                            { item.real_name}
+                                            real name: { item.real_name}
                                         </Card.Text>
                                         <Card.Text>
-                                            {item.power}
+                                            power: {item.power}
                                         </Card.Text>
                                         <Card.Text>
-                                            {item.origin}
+                                            origin: {item.origin}
                                         </Card.Text>
                                         <Card.Text>
-                                            {item.universe}
+                                            universe: {item.universe}
                                         </Card.Text>
                                         <Card.Text>
-                                            {item.comics_appeared_in}
+                                            comics appeared in: {item.comics_appeared_in}
                                         </Card.Text>
                                            
                                         <Button variant="danger" onClick = { () => handleDeleteCharacter(item.id)}>Delete</Button>
