@@ -1,6 +1,7 @@
 body, html{
     background-image: url("assets/img/marvel_battle.png");
     background-size: 180vh;
+    background-attachment: fixed;
 }
 
 .navbar{
