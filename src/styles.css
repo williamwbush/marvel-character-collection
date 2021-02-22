@@ -1,17 +1,110 @@
+body, html{
+    background-image: url("assets/img/marvel_battle.png");
+    background-size: 180vh;
+}
+
+.navbar{
+    height: 10vh;
+}
+
 .move-nav{
-    transform: translate(57vw,0vh);
+    transform: translate(60vw,0vh);
+}
+
+#home {
+    background-color: rgba(0, 0, 0, 0.274);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#display-characters{
+    background-color: rgba(0, 0, 0, 0.274);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#navbar-image {
+    margin-top: 2vh;
+    margin-left: 3vw;
+    height: 13vh;
+    width: auto;
 }
 
 .move-nav a{
     color: white;
+    font-size: 22px;
+    margin-left: 10px !important;
+}
+
+#sign-in-button {
+    font-size: 17px;
+    text-align: right;
+}
+
+/* Home Page Styles */
+#main-title {
+    text-align: center;
+    padding-top: 20vh;
+    color: white;
+}
+
+#main-titles{
+    margin: auto !important;
+    margin-top: 5vh !important;
+    padding: 2vh;
+    width: 85%;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.432);
+}
+
+#title-2 {
+    margin-top: 5vh;
+}
+
+/* Characters Page Styles */
+
+h1 {
+    text-align: center;
+    padding-top: 7vh;
+    color: white;
+}
+
+h4 {
+    text-align: center;
+    margin-top: 5vh !important;
+    padding: 2vw;
+    width: 70%;
+    margin: auto;
+    border-radius: 15px;
+    font-size: 25px;
+    color: white;
 }
 
 /* Input Styles for CreateCharacter Component */
+
+.form {
+    text-align: center !important;
+}
+
+#create {
+    margin-bottom: 50px !important;
+}
+
+#create-character {
+    background-color: #F0131E;
+    border: none;
+    margin-left: 24vw;
+    margin-bottom: 3vh;
+}
+
 input{
     display: block;
-    width: 100%;
+    width: 50%;
     padding: 10px;
-    margin: .4vw !important;
+    margin: auto !important;
+    margin-top: 20px !important;
     border-radius: 5px;
     background-color: white;
 }
@@ -25,3 +118,28 @@ input{
     padding: 10px;
 }
 
+#submit-character {
+    margin-left: 15vw !important;
+    margin-top: 4vh;
+    background-color: #F0131E;
+}
+
+#update-character {
+    margin-left: 17vw !important;
+    margin-top: 4vh;
+    background-color: #F0131E;
+}
+/* Styles for Character Cards */
+
+#card-div {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    width: 1300px;
+    margin-right: 15vw !important;
+}
+
+.card {
+    height: 603px;
+    margin: 10px;
+}

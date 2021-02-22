@@ -10,7 +10,6 @@ import { FirebaseAppProvider, AuthCheck} from 'reactfire';
 import 'firebase/auth';
 import { firebaseConfig } from './firebaseConfig';
 
-
 import {
   BrowserRouter as Router,
   Switch,
@@ -23,41 +22,35 @@ render(
   <React.StrictMode>
     <FirebaseAppProvider firebaseConfig={firebaseConfig}>
     <Router>
-      <Navbar bg='dark' variant='dark'>
+      <Navbar>
         <Navbar.Brand>
-          <img
-            alt="Marvel Character API"
-            src={logo}
-            width="30"
-            className="d-inline-block align-top"
-          />{' '}
-					<Link to="/">Marvel Character API</Link>
+          <a href="/"> <img id="navbar-image" alt="Marvel Character API" src={logo} width="30" className="d-inline-block align-top"/> </a>
         </Navbar.Brand>
       <Nav className="move-nav" activeKey="/">
         
 				<Nav.Item>
           <Nav.Link>
-            <Link to='/'> Home </Link>
+            <Link to='/' id="home"> Home </Link>
           </Nav.Link>
         </Nav.Item>
 
         <AuthCheck fallback={
           <Nav.Item>
             <Nav.Link>
-              <Link to="/login">Login Here</Link>
+              <Login />
             </Nav.Link>
           </Nav.Item>
         }>
 
 				<Nav.Item>
           <Nav.Link>
-            <Link to='/characters'> Display Your Characters </Link>
+            <Link to='/characters' id="display-characters"> Display Your Characters </Link>
           </Nav.Link>
         </Nav.Item>
 
         <Nav.Item>
           <Nav.Link>
-            <Link to='/login'>Logout</Link>
+            <Login />
           </Nav.Link>
         </Nav.Item>
 
@@ -69,19 +62,31 @@ render(
       
 			<Switch>
         <Route exact path="/">
-          <Home title="{ A fast, reliable, and secure web-native API for tracking detailed Marvel character data }" />
+          <Home title="{ A fast, reliable, and secure web-native API for tracking detailed Marvel character data }"
+                title2="{ All data is standardized and checked by real people }"
+          />
         </Route>
         <Route path="/create">
+          <AuthCheck fallback={
+            <Home title="{ A fast, reliable, and secure web-native API for tracking detailed Marvel character data }"
+                  title2="{ All data is standardized and checked by real people }"/>}>
           <CreateCharacter />
+          </AuthCheck>
         </Route>
         <Route path="/characters">
-          <Characters />
+          <AuthCheck fallback={
+            <Home title="{ A fast, reliable, and secure web-native API for tracking detailed Marvel character data }"
+                  title2="{ All data is standardized and checked by real people }"/>}>
+            <Characters />
+          </AuthCheck>
         </Route>
         <Route path="/update">
-          <UpdateCharacter />
-        </Route>
-        <Route path="/login">
-          <Login />
+          <AuthCheck fallback={
+            <Home title="{ A fast, reliable, and secure web-native API for tracking detailed Marvel character data }"
+                  title2="{ All data is standardized and checked by real people }"/>}>
+          <UpdateCharacter />          
+          </AuthCheck>
+
         </Route>
       </Switch>
 

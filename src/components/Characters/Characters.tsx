@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useGetData } from '../../custom-hooks';
 import { Jumbotron, Button, Container, Card, Col, Row} from 'react-bootstrap';
-import captain_marvel from '../../assets/img/captain_marvel.png'
+import avengers from '../../assets/img/avengers.png'
 
 import { useHistory } from 'react-router-dom';
 import { server_calls } from '../../api';
@@ -30,22 +30,20 @@ export const Characters = () => {
         <Container>
             <Row>
                 <Col>
-                    <Jumbotron>
-                        <h1>Your Marvel Character Collection!</h1>
-                        <p>Here is your current collection of characters!</p>
-                        <Button onClick = { () => routeChange('','create')}>Create New Character</Button>
-                    </Jumbotron>
+                        <h1>Your Marvel Character Collection</h1>
+                        <h4>Here is your current collection of characters!</h4>
+                        <Button onClick = { () => routeChange('','create')} id="create-character">Create New Character</Button>
                 </Col>
             </Row>
                         
                       
             <Row>
                 <Col>
-                    <div>
+                    <div id="card-div">
                         {characterData.map( (item:any) => (
                             <div key="item.id"> 
                                 <Card style={{ width: '18rem'}}>
-                                    <Card.Img variant="top" src={captain_marvel} />
+                                    <Card.Img variant="top" src={avengers} />
                                     <Card.Body>
                                         <Card.Title>
                                             { item.current_alias }

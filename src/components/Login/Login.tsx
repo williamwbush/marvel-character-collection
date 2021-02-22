@@ -17,18 +17,13 @@ export const Login = () => {
     }
 
 		return (
-        <Container>
-            <Jumbotron>
-                <h1>Login/Logout Here</h1>
                 <AuthCheck fallback={
-                    <Button onClick={sign_in}>
-                        Sign In
+                    <Button id="sign-in-button" onClick={sign_in}>
+                        Sign In With Google
                     </Button>
                 }>
                     <Button onClick={sign_out}>Sign Out</Button>
                 </AuthCheck>
-            </Jumbotron>
-        </Container>
     )
 
 }
