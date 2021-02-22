@@ -62,28 +62,28 @@ render(
       
 			<Switch>
         <Route exact path="/">
-          <Home title="{ A fast, reliable, and secure web-native API for tracking detailed Marvel character data }"
-                title2="{ All data is standardized and checked by real people }"
+          <Home title="{ Your go-to destination for collecting Marvel comic characters }"
+                title2="{ Organize data for all your favorite superheroes }"
           />
         </Route>
         <Route path="/create">
           <AuthCheck fallback={
-            <Home title="{ A fast, reliable, and secure web-native API for tracking detailed Marvel character data }"
-                  title2="{ All data is standardized and checked by real people }"/>}>
+            <Home title="{ Your go-to destination for collecting Marvel comic characters }"
+                  title2="{ Organize data for all your favorite superheroes }"/>}>
           <CreateCharacter />
           </AuthCheck>
         </Route>
         <Route path="/characters">
           <AuthCheck fallback={
-            <Home title="{ A fast, reliable, and secure web-native API for tracking detailed Marvel character data }"
-                  title2="{ All data is standardized and checked by real people }"/>}>
+            <Home title="{ Your go-to destination for collecting Marvel comic characters }"
+                  title2="{ Organize data for all your favorite superheroes }"/>}>
             <Characters />
           </AuthCheck>
         </Route>
         <Route path="/update">
           <AuthCheck fallback={
-            <Home title="{ A fast, reliable, and secure web-native API for tracking detailed Marvel character data }"
-                  title2="{ All data is standardized and checked by real people }"/>}>
+            <Home title="{ Your go-to destination for collecting Marvel comic characters }"
+                  title2="{ Organize data for all your favorite superheroes }"/>}>
           <UpdateCharacter />          
           </AuthCheck>
 

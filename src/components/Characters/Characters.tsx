@@ -45,7 +45,7 @@ export const Characters = () => {
                                 <Card style={{ width: '18rem'}}>
                                     <Card.Img variant="top" src={avengers} />
                                     <Card.Body>
-                                        <Card.Title>
+                                        <Card.Title id="alias">
                                             { item.current_alias }
                                         </Card.Title>
                                         <Card.Text>
@@ -64,8 +64,8 @@ export const Characters = () => {
                                             comics appeared in: {item.comics_appeared_in}
                                         </Card.Text>
                                            
-                                        <Button variant="danger" onClick = { () => handleDeleteCharacter(item.id)}>Delete</Button>
-                                        <Button variant="primary" onClick = { () => routeChange(item.id, 'update')}>Update</Button>
+                                        <Button variant="danger" onClick = { () => handleDeleteCharacter(item.id)} id="delete-button">Delete</Button>
+                                        <Button variant="primary" onClick = { () => routeChange(item.id, 'update')} id="update-button">Update</Button>
                                     </Card.Body>
                                 </Card>
                             </div>

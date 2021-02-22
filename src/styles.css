@@ -8,7 +8,7 @@ body, html{
 }
 
 .move-nav{
-    transform: translate(60vw,0vh);
+    transform: translate(55vw,0vh);
 }
 
 #home {
@@ -51,8 +51,8 @@ body, html{
 #main-titles{
     margin: auto !important;
     margin-top: 5vh !important;
-    padding: 2vh;
-    width: 85%;
+    padding: 1vh;
+    width: 75%;
     justify-content: center;
     text-align: center;
     color: white;
@@ -95,7 +95,8 @@ h4 {
 #create-character {
     background-color: #F0131E;
     border: none;
-    margin-left: 24vw;
+    margin-left: 26vw;
+
     margin-bottom: 3vh;
 }
 
@@ -142,4 +143,21 @@ input{
 .card {
     height: 620px;
     margin: 10px;
+}
+
+#alias {
+    text-align: center;
+    font-size: 25px;
+}
+
+#delete-button {
+    position: absolute;
+right:    35px;
+bottom:   15px;
+}
+
+#update-button {
+    position: absolute;
+right:    160px;
+bottom:   15px;
 }
